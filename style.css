@@ -1,0 +1,117 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Montserrat, sans-serif;
+}
+
+:root {
+    --warna-utama: #0b2e53;
+    --warna-kedua: #eba207;
+    --warna-ketiga: #373737;
+}
+
+header {
+    background: linear-gradient(var(--warna-utama), #114074);
+}
+
+/* .container {
+    color: white;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+li {
+    padding: 12px;
+    list-style: none;
+}
+
+.hero-section {
+    background-image:
+    linear-gradient(hsla(211, 75%, 11%, 0.8)), url(asset/hero_image.avif);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    align-content: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 90%;
+    margin-left: auto;
+}
+
+.hero-portfolio {
+    background-color: var(--warna-kedua);
+    border-color: var(--warna-kedua);
+    font-weight: 600;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 2px 5px;
+}
+
+.hero-portfolio:hover {
+    background-color: color-mix(in srgb, var(--warna-kedua), black 20%);
+    border-color: color-mix(in srgb, var(--warna-kedua), black 20%);
+}
+
+.hero-portfolio:active {
+    background-color: #124c89;
+    border-color: #124c89;
+}
+
+.hero-hubungi {
+    border-color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 2px 5px;
+}
+
+.hero-hubungi:hover {
+    background-color: color-mix(in srgb, var(--warna-utama), black 20%);
+}
+
+.hero-hubungi:active {
+    background-color: white;
+    color: var(--warna-utama);
+}
+
+.tentang-kami {
+    display: flex;
+    flex-direction: row;
+    background-color: #fffcf5;
+}
+
+.content-tentang-kami {
+    padding: 10px 30px;
+    text-align: justify;
+}
+
+.service {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.service-card  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
