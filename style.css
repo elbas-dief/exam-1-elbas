@@ -4,11 +4,16 @@
     font-family: Montserrat, sans-serif;
 }
 
+/* Variabel */
+
 :root {
     --warna-utama: #0b2e53;
     --warna-kedua: #eba207;
     --warna-ketiga: #373737;
+    --warna-keempat: #f4f4f4;
 }
+
+/* Header */
 
 header {
     background: linear-gradient(var(--warna-utama), #114074);
@@ -34,6 +39,7 @@ ul {
     display: flex;
     flex-direction: row;
     margin: 0px;
+    padding: 0px;
 }
 
 li {
@@ -41,9 +47,11 @@ li {
     list-style: none;
 }
 
+/* Hero Section */
+
 .hero-section {
     background-image:
-    linear-gradient(hsla(211, 75%, 11%, 0.8)), url(asset/hero_image.avif);
+        linear-gradient(hsla(211, 75%, 11%, 0.8)), url(asset/hero_image.avif);
     background-position: center;
     background-size: cover;
     height: 500px;
@@ -95,23 +103,161 @@ li {
     color: var(--warna-utama);
 }
 
-.tentang-kami {
-    display: flex;
-    flex-direction: row;
-    background-color: #fffcf5;
-}
+/* Grouping */
 
-.content-tentang-kami {
-    padding: 10px 30px;
-    text-align: justify;
-}
-
-.service {
-    background-color: aquamarine;
+.sub-title {
+    font-weight: bold;
+    padding-bottom: 20px;
     text-align: center;
 }
 
-.service-card  {
+/* Tentang Kami */
+
+.tentang-kami {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+}
+
+.content-tentang-kami {
+    padding: 20px 80px;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Layanan Kami */
+
+.service {
+    background-color: var(--warna-utama);
+    text-align: center;
+    padding: 3em;
+}
+
+.service-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-item {
+    background-color: white;
+    margin: 1em;
+    text-align: start;
+    border-radius: 15px;
+    padding: 1em 2em;
+}
+
+.icon-service {
+    font-size: x-large;
+}
+
+.title-service {
+    font-weight: bold;
+}
+
+.bangun-rumah {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.900)), url(asset/bangun_rumah.png);
+    background-size: cover;
+}
+
+.renovasi-rumah {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.900)), url(asset/renovasi_rumah.png);
+    background-size: cover;
+}
+
+.desain-rumah {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.900)), url(asset/desain_arsitektur.png);
+    background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+    background-color: var(--warna-keempat);
+    text-align: center;
+    padding: 3em;
+}
+
+.card-portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.pf-card {
+    color: white;
+    background-color: white;
+    height: 220px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin: 1em;
+    padding: 2em;
+}
+
+.title-portfolio,
+.lokasi_p {
+  margin: 0;
+}
+
+.title-portfolio {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.portfolio-1 {
+    background-image: linear-gradient(hsla(211, 77%, 18%, 0.700)), url(asset/portfolio_1.png);
+    background-size: cover;
+}
+
+.portfolio-2 {
+    background-image: linear-gradient(hsla(211, 77%, 18%, 0.700)), url(asset/portfolio_2.png);
+    background-size: cover;
+}
+
+.portfolio-3 {
+    background-image: linear-gradient(hsla(211, 77%, 18%, 0.700)), url(asset/portfolio_3.png);
+    background-size: cover;
+}
+
+.portfolio-4 {
+    background-image: linear-gradient(hsla(211, 77%, 18%, 0.700)), url(asset/portfolio_4.png);
+    background-size: cover;
+}
+
+.portfolio-5 {
+    background-image: linear-gradient(hsla(211, 77%, 18%, 0.700)), url(asset/portfolio_5.png);
+    background-size: cover;
+}
+
+.portfolio-6 {
+    background-image: linear-gradient(hsla(211, 77%, 18%, 0.700)), url(asset/portfolio_6.png);
+    background-size: cover;
+}
+
+/* Hubungi Kami */
+
+.hubungi-kami {
+    padding: 3em;
+}
+
+.title-hubungi-kami {
+    padding-bottom: 40px;
+}
+
+.hubungi-kami-content {
+    background-color: #0b2e53;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+
+.hubungi-kami-item {
+    /* background-color: var(--warna-keempat); */
+    /* border-radius: 15px; */
+    padding: 20px;
+    margin: 20px;
 }
