@@ -4,6 +4,10 @@
     font-family: Montserrat, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Variabel */
 
 :root {
@@ -17,15 +21,16 @@
 
 header {
     background: linear-gradient(var(--warna-utama), #114074);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
 }
 
-/* .container {
-    color: white;
-    width: 90%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-} */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
 
 nav {
     color: white;
@@ -33,6 +38,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 76px;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    /* transition: all 0.3s ease; */
 }
 
 ul {
@@ -66,12 +78,13 @@ li:hover {
     background-size: cover;
     height: 500px;
     align-content: center;
+    padding-top: 80px;
 }
 
 .hero-content {
     color: white;
     max-width: 90%;
-    margin-left: auto;
+    margin: auto;
 }
 
 .hero-portfolio {
@@ -117,36 +130,27 @@ li:hover {
     color: var(--warna-utama);
 }
 
-/* All Grouping */
-
-.sub-title {
-    font-weight: bold;
-    /* padding-bottom: 20px; */
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.content {
-    margin-top: 40px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
 /* Tentang Kami */
 
 .tentang-kami {
     display: flex;
     flex-direction: row;
     background-color: #f4f4f4;
+    flex-wrap: nowrap;
+}
+
+.image-tentang-kami {
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    flex: 1 1 40px;
 }
 
 .content-tentang-kami {
     padding: 20px 80px;
     margin: 0;
     text-align: justify;
+    max-width: 100%;
 }
 
 /* Layanan Kami */
@@ -264,7 +268,7 @@ a {
 .portfolio-2 {
     background-image: url(asset/portfolio_2.png);
     background-size: cover;
-    
+
 }
 
 .portfolio-3 {
@@ -287,7 +291,12 @@ a {
     background-size: cover;
 }
 
-.portfolio-1, .portfolio-2, .portfolio-3, .portfolio-4, .portfolio-5, .portfolio-6 {
+.portfolio-1,
+.portfolio-2,
+.portfolio-3,
+.portfolio-4,
+.portfolio-5,
+.portfolio-6 {
     position: relative;
     overflow: hidden;
     transition: transform 0.5s, box-shadow 0.2s;
@@ -347,9 +356,9 @@ a {
     padding: 3em;
 }
 
-.title-hubungi-kami {
-    /* padding-bottom: 40px; */
-}
+/* .title-hubungi-kami {
+    padding-bottom: 40px;
+} */
 
 .hubungi-kami-content {
     background-color: #0b2e53;
@@ -357,18 +366,16 @@ a {
     border-radius: 15px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     text-align: justify;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    padding: 0px 4px;
-    margin: 20px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .hubungi-kami-item {
-    /* background-color: var(--warna-keempat); */
-    /* border-radius: 15px; */
-    padding: 26px;
-    /* margin: 20px; */
+    padding: 30px;
+    flex: 1 1 500px;
 }
 
 iframe {
@@ -388,6 +395,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-card {
@@ -404,4 +412,87 @@ footer {
 .footer-nav a:hover {
     color: #eba207;
     transform: scale(1.1);
+}
+
+/* All Grouping */
+
+.sub-title {
+    font-weight: bold;
+    /* padding-bottom: 20px; */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .tentang-kami {
+        flex-wrap: nowrap;
+    }
+
+    .service-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-portfolio {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tentang-kami {
+        flex-wrap: wrap;
+    }
+
+    .image-tentang-kami {
+        max-width: 100%;
+    }
+
+    .service-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .tentang-kami {
+        flex-wrap: wrap;
+    }
+
+    .image-tentang-kami {
+        max-width: 100%;
+    }
+
+    .service-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    iframe {
+        width: 75%;
+    }
 }
