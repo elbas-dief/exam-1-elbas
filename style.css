@@ -21,7 +21,8 @@ html {
 
 header {
     background: linear-gradient(var(--warna-utama), #114074);
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100%;
     z-index: 5;
 }
@@ -46,6 +47,20 @@ nav {
     background-color: white;
     /* transition: all 0.3s ease; */
 }
+
+/* Burger Menu */
+
+/* ul {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--warna-utama), #114074);
+    width: 60%;
+    height: calc(100vh - 76px);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding-top: 40px;
+} */
 
 ul {
     display: flex;
@@ -78,7 +93,6 @@ li:hover {
     background-size: cover;
     height: 500px;
     align-content: center;
-    padding-top: 80px;
 }
 
 .hero-content {
@@ -446,7 +460,7 @@ a {
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 990px) {
     .burger-menu {
         display: flex;
     }
