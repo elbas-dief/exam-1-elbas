@@ -17,18 +17,18 @@
 </head>
 
 <body>
-    <header id="beranda">
+    <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">
                     <img src="asset/logo_h_bw.png" alt="company_logo" height="50px">
                 </a>
-                <div class="burger-menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="burger-menu" id="burger-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
-                <ul>
+                <ul id="nav-menu">
                     <a href="#beranda">
                         <li>Beranda</li>
                     </a>
@@ -49,7 +49,9 @@
         </div>
     </header>
 
-    <main>
+    <button id="test">test</button>
+
+    <main id="beranda">
         <section class="hero-section">
             <div class="hero-content">
                 <h1 style="font-size: 60px; font-weight: bold; margin: 0;">Graha <span
@@ -252,8 +254,8 @@
                     <h5 class="footer-title">Navigasi Cepat</h5>
                     <p><a href="#beranda">Beranda</a></p>
                     <p><a href="#tentang-kami">Tentang Kami</a></p>
-                    <p><a href="#portfolio">Portfolio </a></p>
                     <p><a href="#layanan">Layanan</a></p>
+                    <p><a href="#portfolio">Portfolio </a></p>
                 </div>
                 <div class="footer-card footer-hubungi col-md-3">
                     <h5 class="footer-title">Hubungi Kami</h5>
@@ -265,6 +267,8 @@
             </div>
         </footer>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
